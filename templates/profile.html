@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Perfil{% endblock %}
+{% block content %}
+<h1>Hola, {{ current_user.username }}</h1>
+<p>Correo: {{ current_user.email }}</p>
+<p>Esta página está protegida con @login_required.</p>
+{% endblock %}

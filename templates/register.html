@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Registro{% endblock %}
+{% block content %}
+<h1>Registro</h1>
+<form method="POST" novalidate>
+  {{ form.hidden_tag() }}
+  {{ form.username.label }} {{ form.username() }}
+  {% for e in form.username.errors %}<span class="error">{{ e }}</span>{% endfor %}
+
+  {{ form.email.label }} {{ form.email() }}
+  {% for e in form.email.errors %}<span class="error">{{ e }}</span>{% endfor %}
+
+  {{ form.password.label }} {{ form.password() }}
+  {% for e in form.password.errors %}<span class="error">{{ e }}</span>{% endfor %}
+
+  {{ form.confirm_password.label }} {{ form.confirm_password() }}
+  {% for e in form.confirm_password.errors %}<span class="error">{{ e }}</span>{% endfor %}
+
+  {{ form.submit() }}
+</form>
+{% endblock %}

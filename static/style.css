@@ -1,0 +1,6 @@
+body { font-family: Arial, sans-serif; max-width: 600px; margin: 20px auto; padding: 0 10px; }
+nav a { margin-right: 10px; }
+label { display: block; margin-top: 10px; }
+input[type=submit] { margin-top: 10px; }
+.flashes { color: blue; }
+.error { color: red; }

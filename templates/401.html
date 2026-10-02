@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %}401{% endblock %}
+{% block content %}
+<h1>401 - No autorizado</h1>
+<p>Debes <a href="{{ url_for('login') }}">iniciar sesión</a>.</p>
+{% endblock %}
