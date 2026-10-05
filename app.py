@@ -1,5 +1,7 @@
+import os
 import sys
 
+from dotenv import load_dotenv
 from flask import Flask, render_template, redirect, url_for, flash, abort
 from flask_wtf.csrf import CSRFProtect
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user
@@ -7,9 +9,12 @@ from flask_login import LoginManager, login_user, logout_user, login_required, c
 from forms import RegistrationForm, LoginForm
 from models import get_user_by_id, get_user_by_username, create_user
 
+# Carga las variables del archivo .env (que NO se sube a Git)
+load_dotenv()
+
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = 'clave_super_secreta'
+app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
 app.config['SESSION_COOKIE_SECURE'] = True
 app.config['REMEMBER_COOKIE_HTTPONLY'] = True
 
