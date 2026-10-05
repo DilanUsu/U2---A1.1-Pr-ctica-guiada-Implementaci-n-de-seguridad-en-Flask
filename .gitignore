@@ -6,3 +6,4 @@ venv/
 ~$*
 capturas/
 LEEME.txt
+.env
